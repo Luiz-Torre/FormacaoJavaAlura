@@ -3,7 +3,13 @@ public class CriaConta {
         Conta conta = new Conta();
         conta.deposita(50.0);
         System.out.println(conta.saldo);
-        conta.saca(20.0);
-        System.out.println(conta.saldo);
+        boolean verificaSaque = conta.saca(80.0);
+        if(verificaSaque){
+            System.out.println("Saque feito com sucesso.\n" +
+                    "Seu novo saldo eh: " + conta.saldo);
+        }
+        else{
+            System.out.println("Não foi possível fazer o saque");
+        }
     }
 }
