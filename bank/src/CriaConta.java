@@ -9,7 +9,18 @@ public class CriaConta {
                     "Seu novo saldo eh: " + conta.saldo);
         }
         else{
-            System.out.println("Não foi possível fazer o saque");
+            System.out.println("Nao foi possivel fazer o saque");
+        }
+
+        Conta outraConta = new Conta();
+        boolean verificaTansferencia = conta.transfere(10,outraConta);
+
+        if(verificaTansferencia){
+            System.out.println("Transferencia feita com sucesso.\n" +
+                    "Seu novo saldo eh: " + conta.saldo + "\nO novo saldo da conta que recebeu o dinheiro eh: " + outraConta.saldo);
+        }
+        else{
+            System.out.println("Nao foi possivel fazer a transferencia");
         }
     }
 }
