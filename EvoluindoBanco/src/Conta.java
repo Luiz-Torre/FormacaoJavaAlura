@@ -43,4 +43,7 @@ public class Conta {
         return conta.saldo;
     }
 
+    public static int getTotalContasCriadas() {
+        return totalContasCriadas;
+    }
 }
