@@ -38,4 +38,8 @@ public class Conta {
     static String getNomeCliente(Conta conta){
         return Cliente.getNome(conta.titular);
     }
+    static double getSaldo(Conta conta){
+        return conta.saldo;
+    }
+
 }

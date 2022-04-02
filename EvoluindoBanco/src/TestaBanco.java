@@ -4,5 +4,7 @@ public class TestaBanco {
 
         Conta contaLuiz = new Conta(1, "1234-5", cliente);
         System.out.println(Conta.getNomeCliente(contaLuiz));
+        contaLuiz.deposita(100);
+        System.out.println(Conta.getSaldo(contaLuiz));
     }
 }
