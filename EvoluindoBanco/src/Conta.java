@@ -3,13 +3,14 @@ public class Conta {
     private Integer agencia;
     private String numero; //A conta é apenas com número nesse escopo
     private Cliente titular;
+    private static int totalContasCriadas;
 
-    Conta(Integer agencia, String numero, Cliente titular){
+    Conta(Integer agenia, String numero, Cliente titular){
         this.saldo = 0;
         this.agencia = agencia;
         this.numero = numero;
         this.titular = titular;
-
+        Conta.totalContasCriadas++;
     }
 
     void deposita(double valor){
